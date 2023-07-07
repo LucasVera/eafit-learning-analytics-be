@@ -1,0 +1,37 @@
+{
+  "extends": "./tsconfig.paths.json",
+  "compilerOptions": {
+    "lib": [
+      "ESNext"
+    ],
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "ES2020",
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true, // sequelize-typescript
+    "emitDecoratorMetadata": true // sequelize-typescript
+  },
+  "include": [
+    "src/**/*.ts",
+    "serverless.ts"
+  ],
+  "exclude": [
+    "node_modules/**/*",
+    ".esbuild/**/*",
+    ".serverless/**/*",
+    ".webpack/**/*",
+    "_warmup/**/*",
+    ".vscode/**/*",
+    "pg-native"
+  ],
+  "ts-node": {
+    "require": [
+      "tsconfig-paths/register"
+    ]
+  }
+}
